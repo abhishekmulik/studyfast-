@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
+{% for p in post %}
+<p class="postcontent">
+<h1 style="font-family: 'Russo One', sans-serif;
+font-size: 3em; margin-bottom: 10px; text-align: center;">{{p.title}}</h1></p>
+<!-- <h4>author</h4><h3 style="font-family: 'Great Vibes', cursive;
+font-family: 'Parisienne', cursive;">{{p.author}}</h3>
+<hr> -->
+<p class="postcontent">{{ p.text|safe|linebreaksbr }}</p>
+{% if user.is_authenticated %}
+  <a class="btn btn-info" href="{%url 'post_edit' pk=p.pk %}">Edit
+      
+  </a>
+  <a class="btn btn-danger" href="{%url 'post_remove' pk=p.pk %}">Delete
+    
+  </a>
+  <hr>
+{% endif %}
+{% endfor %}
+
+{% endblock %}
+
+
+
+
+
+

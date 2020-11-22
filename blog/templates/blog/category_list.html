@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h1 style="font-family: 'Russo One', sans-serif;
+font-size: 3em; margin-bottom: 10px;">Groups</h1>
+
+<div class="row">
+{%for cat in category %}
+   
+    <div class="col-sm-6">
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{cat.subject}}</div>
+    <div class="card-body">
+      <h5 class="card-title"><a href="{% url 'postview' pk=cat.id %}"><p class="card-text">{{cat}}</p></a></h5>
+      <p class="card-text">{{ cat.description }}</p>
+    </div>
+  </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

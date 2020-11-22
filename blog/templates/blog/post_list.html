@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+ <div class="centerstage">  
+    
+    {% for post in post_list %}
+    
+    <div class="post">
+          <a href="{% url 'post_detail' pk=post.pk%}" class="list-group-item list-group-item-action list-group-item-dark" style="color:black;font-weight:bolder; font-family:Verdana, Geneva, Tahoma, sans-serif">{{ post.title }}</a>
+    </div> 
+      <br>
+      {% endfor %}
+  {% endblock %}
+            <!-- <div class="card-body">
+                <div class="date">
+              <h5 class="card-title">Published on: {{post.published_date|date:"D M Y"}}</h5></div> -->
+<!--               
+              <p class="card-text">Comments: {{ post.approve_comments.count }}</p></div>
+              <a href="{% url 'post_detail' pk=post.pk%}" class="btn btn-primary">Read More.</a>
+            </div> -->
+          
+        <!-- <div class="card text-white bg-dark mb-3" style="max-width: 18rem; background-color: black;"></div> -->
+<!-- 
+        <h1><a href="{% url 'post_detail' pk=post.pk%}">{{ post.title }}</a></h1>
+        <div class="card-body">
+            <div class="date">
+            <p>Published on: {{post.published_date|date:"D M Y"}}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
+        </div>
+    </div> -->
+    

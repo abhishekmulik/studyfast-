@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h1>New Subject</h1>
+<div class="jumbotron">
+    <div class="form-group">
+        <form class="post-form" method="POST"enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            
+            <button type="submit" class="btn btn-success">Add Subject</button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

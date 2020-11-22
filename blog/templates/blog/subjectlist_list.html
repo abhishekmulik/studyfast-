@@ -1,0 +1,20 @@
+<div class="jumbotron " style="margin-bottom: 0px;">
+      <h1>StudY FasT</h1>
+      <p>Build By Students For Students!!!</p>
+      </div>
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="centerstage">  
+      <h1 style="font-family: 'Russo One', sans-serif;
+      font-size: 3em; margin-bottom: 10px;">Subjects</h1>
+      <br>
+
+    {% for sub in subjectlist_list %}
+    
+    <div class="post">
+          <a href="{% url 'categorylist' pk=sub.id %}" class="list-group-item list-group-item-action list-group-item-dark" style="color:black;font-weight:bolder; font-family:Verdana, Geneva, Tahoma, sans-serif">{{sub.subject}}</a>
+    </div> 
+      <br>
+{% endfor %}
+{% endblock %}
