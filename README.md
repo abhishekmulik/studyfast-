@@ -1,0 +1,3 @@
+# studyfast-
+
+The main motive of our website is to make learning easy for engineering students. This website is specially designed for the students of Computer engineering. We provide solutions and codes of all the problem statements given in the syllabus. It becomes very handy for the students to get all codes and solutions at one place. We hope you to contribute your ideas and solutions with unique approach. Right now we are providing the solutions of practical assignments included in SPPU syllabus. With your support we can extend our work too. We welcome all kinds of suggestions and feedback.
